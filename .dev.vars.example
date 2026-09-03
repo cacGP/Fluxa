@@ -1,0 +1,7 @@
+ADMIN_TOKEN=replace-with-a-random-32-byte-token
+SUB_TOKEN=replace-with-a-different-random-32-byte-token
+CLIENT_UUID=550e8400-e29b-41d4-a716-446655440000
+TROJAN_PASSWORD=replace-with-a-long-random-password
+# Optional operator-controlled HTTP CONNECT relay:
+# UPSTREAM_PROXY=https://user:password@relay.example:8443
+# UPSTREAM_PROXY_MODE=cloudflare

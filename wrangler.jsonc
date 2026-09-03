@@ -1,0 +1,27 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "fluxa",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-09-03",
+  "compatibility_flags": ["nodejs_compat"],
+  "secrets": {
+    "required": ["ADMIN_TOKEN", "SUB_TOKEN", "CLIENT_UUID", "TROJAN_PASSWORD"]
+  },
+  "triggers": {
+    "crons": ["17 */2 * * *"]
+  },
+  "limits": {
+    "subrequests": 50
+  },
+  "durable_objects": {
+    "bindings": [
+      { "name": "FLUXA_COORDINATOR", "class_name": "FluxaCoordinator" }
+    ]
+  },
+  "exports": {
+    "FluxaCoordinator": { "type": "durable-object", "storage": "sqlite" }
+  },
+  "kv_namespaces": [
+    { "binding": "FLUXA_KV" }
+  ]
+}

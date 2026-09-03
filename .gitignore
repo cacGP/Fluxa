@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.dev.vars
+.env
+.wrangler/
+.DS_Store
+.wrangler-dry-run/
+.ci-secrets.env
+.fluxa-url.txt

@@ -1,0 +1,32 @@
+name: Feature request
+description: Suggest a maintainable Fluxa improvement
+title: "[Feature] "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+      description: Explain the user problem before proposing implementation details.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+    validations:
+      required: true
+  - type: textarea
+    id: compatibility
+    attributes:
+      label: Compatibility/source documentation
+      description: For client/protocol features, link to current official documentation or a reproducible fixture.
+  - type: checkboxes
+    id: principles
+    attributes:
+      label: Project principles
+      options:
+        - label: This does not require hard-coded third-party credentials or an author-controlled relay.
+          required: true
+        - label: This does not claim fake latency, fake geography, or unsupported client compatibility.
+          required: true

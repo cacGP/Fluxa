@@ -1,0 +1,13 @@
+Fluxa v0.8.0 实际部署（Windows）
+
+1. 解压整个文件夹。
+2. 在文件夹空白处 Shift + 鼠标右键，选择“在终端中打开”。
+3. 运行：
+   powershell -ExecutionPolicy Bypass -File .\DEPLOY_WINDOWS.ps1
+4. 浏览器弹出 Cloudflare 登录/授权时，使用你自己的 Cloudflare 账号确认。
+5. 脚本会自动：安装依赖 → 生成四套独立凭据 → 登录 Cloudflare → 跑 52 项门禁 → 自动创建 KV → 创建 Durable Object → 部署 Worker → 执行只读 Smoke Check。
+
+重要：
+- .dev.vars 包含真实凭据，已经被 .gitignore 排除，不要上传 GitHub、不要发到聊天或截图中。
+- 如果脚本停在 npm install，通常是本机 npm 网络问题，不是 Fluxa 代码问题。
+- 如果 Cloudflare 部署报错，把“错误信息”发给 ChatGPT，但先遮住任何 Token/UUID/密码。

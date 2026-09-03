@@ -1,0 +1,35 @@
+{
+  "name": "fluxa",
+  "version": "0.8.0",
+  "private": false,
+  "description": "A security-first edge proxy, quality catalog, multi-client subscription and observability manager for Cloudflare Workers.",
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test tests/*.test.mjs",
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "cf-types": "wrangler types",
+    "secrets": "node scripts/generate-secrets.mjs",
+    "check": "npm run typecheck && npm test",
+    "release-check": "npm run check && node scripts/release-check.mjs",
+    "smoke": "node scripts/smoke-check.mjs"
+  },
+  "keywords": [
+    "cloudflare-workers",
+    "vless",
+    "trojan",
+    "subscription",
+    "edge",
+    "proxy"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "typescript": "5.8.3",
+    "wrangler": "4.128.0"
+  }
+}
