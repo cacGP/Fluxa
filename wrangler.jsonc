@@ -10,9 +10,6 @@
   "triggers": {
     "crons": ["17 */2 * * *"]
   },
-  "limits": {
-    "subrequests": 50
-  },
   "durable_objects": {
     "bindings": [
       { "name": "FLUXA_COORDINATOR", "class_name": "FluxaCoordinator" }
