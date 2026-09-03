@@ -4,9 +4,6 @@
   "main": "src/index.ts",
   "compatibility_date": "2026-09-03",
   "compatibility_flags": ["nodejs_compat"],
-  "secrets": {
-    "required": ["ADMIN_TOKEN", "SUB_TOKEN", "CLIENT_UUID", "TROJAN_PASSWORD"]
-  },
   "triggers": {
     "crons": ["17 */2 * * *"]
   },
