@@ -15,7 +15,10 @@
   "exports": {
     "FluxaCoordinator": { "type": "durable-object", "storage": "sqlite" }
   },
-  "kv_namespaces": [
-    { "binding": "FLUXA_KV" }
-  ]
+ "kv_namespaces": [
+  {
+    "binding": "FLUXA_KV",
+    "id": "30b681684f0040a5ab45adc01d33d17e"
+  }
+]
 }
